@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Hibernate</groupId>
+  <artifactId>Relacions</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+   <!-- COPIAD SOLO DE AQUI A ABAJO-->
+  <build>
+  <!-- Este plugin hace que el Java no se te ponga en Java 5 porque el Eclipse es retrasado -->
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <archive>
+                        <index>true</index>
+                        <manifest>
+  <!-- Aqui va tu clase donde esta el main por si te da el Error: Couldn't find or load main class -->                      
+                            <mainClass>Profesor</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                
+            </plugin>
+        </plugins>
+  </build>
+  <dependencies>
+  <!-- Hibernate. 5.4.6 es la ultima version -->
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+	<dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    	<version>5.4.6.Final</version>
+	</dependency>
+	    <!-- Conector MYSQL. Debe tener la version de tu MySQL -->
+	<dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>8.0.16</version>
+	</dependency>
+	  
+
+</dependencies>
+
+
+<!-- ESTO NO OBVIAMENTE -->
+</project>

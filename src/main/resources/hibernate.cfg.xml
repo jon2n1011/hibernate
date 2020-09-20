@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- SQL Dialect. La ultima version es el 8. Otro dialecto dará errores varios -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+		<!-- Database Connection Settings -->
+		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<!-- Especificar aqui la DB -->		
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/nueva9?createDatabaseIfNotExist=true&amp;serverTimezone=UTC</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">super3</property>
+<!-- Crea tablas automáticamente -->
+<!-- update : Crea las tablas solo si no existen. Si existen no toca nada -->
+<!-- create	 : Siempre dropea las tablas y las vuelve a crear -->	
+		<property name="hibernate.hbm2ddl.auto">create</property>
+		<property name="show_sql">false</property>
+
+		<!-- Specifying Session Context -->
+		<property name="hibernate.current_session_context_class">org.hibernate.context.internal.ThreadLocalSessionContext</property>
+
+<!-- Aqui van las clases que mapees. TODAS -->
+		<mapping class="ProyectoHibernate.ProyectoHibernate.Message" />
+		<mapping class="ProyectoHibernate.ProyectoHibernate.Mort" />
+		<mapping class="ProyectoHibernate.ProyectoHibernate.Partida" />
+		<mapping class="ProyectoHibernate.ProyectoHibernate.Rol" />
+		<mapping class="ProyectoHibernate.ProyectoHibernate.Roljugadorpartida" />
+		<mapping class="ProyectoHibernate.ProyectoHibernate.User" />
+		<mapping class="ProyectoHibernate.ProyectoHibernate.Vot" />
+		<mapping class="ProyectoHibernate.ProyectoHibernate.xatMessage" />
+	</session-factory>
+</hibernate-configuration>
