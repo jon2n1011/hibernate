@@ -1,6 +1,6 @@
-# Título del Proyecto
+# El lobo
 
-_Acá va un párrafo que describa lo que es el proyecto_
+Demostración del juego de el lobo adaptado a hibernate
 
 ## Comenzando 🚀
 
